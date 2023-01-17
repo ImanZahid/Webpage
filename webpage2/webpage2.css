@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i');
+
+html, body, div, h1, h2, h3, p, img, nav, footer { margin:0; padding: 0; }
+
+body { font-family: Ubuntu; font-weight: 300;}
+
+h1, h2, h3 { font-weight: 400;} 
+
+#product { width: 100% ; }
+
+/* Tablet and Desktop version */
+@media screen and (min-width : 790px) {
+#main {
+    width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #99ff99;
+    box-shadow: 4px 6px 21px -6px rgba(0,0,0,0.75);
+}
+
+nav #menuButton { display: none; } /* do not show menuButton in desktop version */
+
+nav ul {
+    list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul li {
+    height: 40px;
+    line-height: 40px;
+    width: 110px;
+   /* border: 1px solid black; */
+    padding-left: 50px;
+    
+}
+
+nav ul li:hover {
+    font-style: italic; color: blue;
+}
+
+
+nav li:nth-child(1) {
+    background: url(img/icons.png) no-repeat -5px -5px ;
+}
+
+nav li:nth-child(2) {
+    background: url(img/icons.png) no-repeat -5px -68px ;
+}
+
+nav li:nth-child(3) {
+    background: url(img/icons.png) no-repeat -5px -131px ;
+}
+
+nav ul li:nth-child(4) {
+    width: 200px;
+    padding: 0;
+}
+
+li input[type=text] {
+    width: 100px;
+}
+
+li input[type=button] {
+    border: 1px solid #292; background: #393; color: white;
+}
+
+h1 { margin: 20px 0 ; text-align: center;}
+
+p { padding: 20px; background: white; margin-bottom: 30px ; font-size: 0.8em; line-height:1.3;}
+p span { font-weight: bold; }
+
+#pictureBox { margin-bottom: 40px;}
+
+#row3 { display: flex; }
+#row3 img { width: 120px;}
+
+#leftCol {  width: 200px; }
+#leftCol ul { list-style-image: url(img/bullet_accept.png);}
+
+#middleCol, #rightCol {  width : 250px; text-align: center;}
+
+footer {  padding-top: 60px; text-align: center;}
+footer a { margin: 30px; color: #f00; text-decoration: none;}
+
+}
+
+/* Mobile Version */
+@media screen and ( max-width : 789px) {
+    #main { background: #9f9;}
+    nav ul { display: none;}
+    nav {
+        text-align: right;
+        padding: 10px;
+        background: #EEE;
+        border:1px solid #BBB;
+        margin: 2px;
+    }
+    nav #menuButton {
+        width: 35px;
+        display: inline-block; /* to be able to set its width */
+    }
+        
+    #menuButton div {
+        background: #000;
+        height: 5px;
+        margin: 6px 0;
+    }
+    
+    #menuButton:hover { cursor: pointer;}
+    
+	/* vw : relative to the viewport width, and vh for height, useful for responsive design */
+    h1 { text-align: center; margin: 15px 0; font-size: 5vw;}
+    
+    p { padding: 10px; background: white; margin: 10px 15px; font-size: 0.8em; line-height:1.3;}
+    p span { font-weight: bold; }
+
+    #pictureBox { margin-bottom: 40px; text-align: center;}
+    #pictureBox img { width: 95%;}
+    
+    #row3 { padding: 0 10px;}
+    #row3 > div {
+        text-align: center;
+        border-bottom: 4px double #bbb;
+        padding: 20px 0;
+        background: #6b6;
+        margin-bottom: 20px;
+    }
+    #row3 img { width: 25%;}
+    #row3 ul { list-style: none;}
+    footer { text-align: center; padding: 10%; background: #666;}
+    footer a { margin: 3%; color: #aaa; text-decoration: none;}
+
+}
