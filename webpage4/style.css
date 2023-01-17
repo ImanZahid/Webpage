@@ -1,0 +1,105 @@
+* { margin:0; padding:0; }
+
+body {
+    background: url(img/bg-body.jpg) ;
+    color: #FFF;
+    padding-top: 30px;
+    font-family: arial;
+}
+
+header, nav, footer  { width: 700px; margin: 0  auto;}
+
+body > article {
+    background: url(img/bg-content.jpg) ;
+}
+
+header ul { 
+    list-style: none;
+    font: 24px arial ;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+header { text-align: center;}
+
+header ul li {
+    padding: 10px;
+    padding-top: 30px;
+}
+
+header ul li:hover {
+    color: #9f5b34;
+}
+
+header ul li:nth-of-type(2) {
+    background: url(img/bg-menu-selected.jpg);
+}
+
+nav { 
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 0;
+    
+}
+
+nav div img {
+    width: 200px;
+    border:3px solid #ddd;
+}
+
+nav div { text-align: center; }
+nav > div > div  { position: relative;}
+
+nav div h3 { margin: 10px auto; font-size: 1.8em; font-weight: normal;}
+nav div h4 { color: rgb(24, 12, 138); font-size: 1.5em; }
+
+.cover {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height: 100%;
+    background: #000;
+    opacity: 0 ;
+    transition: all ease 0.4s;
+    box-sizing: border-box;
+}
+
+nav > div:hover .cover {
+    opacity: 0.5;
+    width: 100%;
+}
+
+footer { display: flex; justify-content: center;}
+
+footer aside {
+    display: flex; justify-content: flex-end; align-items: center;
+    height: 300px;
+    width: 40%;
+    background: rgba(0,0,0, 0.3);
+    font-size: 40px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+footer >  div {
+    display: flex; justify-content: center; align-items: center; 
+    width: 60%;
+}
+
+footer article {  text-align: center;}
+footer article div img { width: 50%; border-radius: 50%;}
+
+@media screen and (max-width: 700px) {
+    header, nav, footer { width: 100%;}
+    header div img { width: 70%;}
+    header ul { display: none;}
+    header { padding-bottom: 30px;}
+
+    nav, footer { display: block;}
+    footer  { display: none;}
+
+    nav div img { width: 70%;}
+    nav div { margin-bottom: 30px;}
+}
