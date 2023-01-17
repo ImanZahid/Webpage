@@ -1,0 +1,113 @@
+* { box-sizing: border-box; margin:0 ;}
+
+body { font-family: verdana; }
+
+/* HEADER PART */
+header {
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    padding: 0  20px;
+}
+
+header .menu-icon { display: none;}
+
+header .logo img { width: 120px;}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #151429 ;
+}
+header ul li a:hover {
+    border-bottom: 2px solid red;
+    
+}
+
+header ul li.signup a {
+    border:2px solid #151429;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all ease 0.5s;
+}
+
+header ul li.signup a:hover {
+    background-color: #151429;
+    color: #FFF;
+}
+
+/* SECTION/MAIN PART */
+
+section {
+    display: flex;
+    padding: 120px 60px 10px 60px ;
+}
+
+section .image img { width: 90%}
+
+section > div { flex:1 ; }
+
+section .text { padding-right: 80px; }
+
+section .text h1 {
+    font-size: 45px;
+    font-weight: normal;
+}
+
+section .text h1:last-of-type {
+    text-decoration: underline;
+    text-decoration-color: red;
+    margin-bottom: 40px;
+}
+
+section .text p {
+    font-size: 15px;
+    line-height: 28px;
+    margin: 40px 0 ;
+}
+
+section .text .btn {
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #02238f;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+/* QUESTION BOX PART - fixed position */
+.question {
+    cursor: pointer ;
+    background: #A22;
+    color: #FFF;
+    padding: 10px 30px 50px 30px;
+    position: fixed;
+    transform: rotate(-90deg);
+    right:-100px ;
+    top: 300px;
+    transition: all ease 0.5s;
+}
+.question:hover {
+    right: -65px;
+}
+
+/* SMALLER DISPLAY SIZE */
+
+@media (max-width: 950px) {
+    header ul { display: none; }
+    header .menu-icon { display: block;}
+    section { flex-direction: column; text-align: center; }
+    section .image  {  margin-top: 40px;}
+    section .text { padding-right: 0; }
+}
